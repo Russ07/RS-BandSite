@@ -11,3 +11,45 @@
       @content;
     }
   }
+
+  @mixin body-copy-text {
+
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;  
+
+    @include tablet {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: 400;
+    }
+
+  }
+
+  @mixin footer-copy-text {
+
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+
+    @include tablet {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    }
+
+  }
+
+  @mixin button-lable-text {
+
+    font-size: 10px;
+    line-height: 20px;
+    font-weight: 700;
+
+    @include tablet {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 700;
+    }
+
+  }
