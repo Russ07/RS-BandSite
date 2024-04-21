@@ -14,13 +14,13 @@
 
   @mixin body-copy-text {
 
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
     font-weight: 400;  
 
     @include tablet {
-        font-size: 14px;
-        line-height: 22px;
+        font-size: 1.4rem;
+        line-height: 2.2rem;
         font-weight: 400;
     }
 
@@ -28,13 +28,13 @@
 
   @mixin footer-copy-text {
 
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
     font-weight: 400;
 
     @include tablet {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 1.4rem;
+    line-height: 2rem;
     font-weight: 400;
     }
 
@@ -42,13 +42,13 @@
 
   @mixin button-lable-text {
 
-    font-size: 10px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 2rem;
     font-weight: 700;
 
     @include tablet {
-    font-size: 12px;
-    line-height: 20px;
+    font-size: 1.2rem;
+    line-height: 2rem;
     font-weight: 700;
     }
 

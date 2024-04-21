@@ -1,7 +1,12 @@
 @use './partials/mixin.scss' as *;
 @use './partials/variables.scss' as *;
+
 html{
-    font-size: 10px;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
 }
 
 h1 {
