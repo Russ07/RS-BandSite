@@ -18,10 +18,6 @@ body {
   font-family: "AvenirNext-Regular";
   src: url("../assets/font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/font/Alternative/AvenirNextLTPro.ttf") format("truetype");
 }
-html {
-  font-family: "AvenirNext-Bold";
-}
-
 h1 {
   font-size: 2.4rem;
   line-height: 3.2rem;
