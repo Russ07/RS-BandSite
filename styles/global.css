@@ -6,6 +6,22 @@ body {
   font-size: 1.6rem;
 }
 
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("../assets/font/AvenirNextLTPro-Bold.woff2") format("woff2"), url("../assets/font/AvenirNextLTPro-Bold.otf") format("opentype"), url("../assets/font/Alternative/AvenirNextLTProBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-Demi";
+  src: url("../assets/font/AvenirNextLTPro-Demi.woff2") format("woff2"), url("../assets/font/AvenirNextLTPro-Demi.otf") format("opentype"), url("../assets/font/Alternative/AvenirNextLTProDemi.ttf") format("truetype");
+}
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("../assets/font/AvenirNextLTPro-Regular.woff2") format("woff2"), url("../assets/font/AvenirNextLTPro-Regular.otf") format("opentype"), url("../assets/font/Alternative/AvenirNextLTPro.ttf") format("truetype");
+}
+html {
+  font-family: "AvenirNext-Bold";
+}
+
 h1 {
   font-size: 2.4rem;
   line-height: 3.2rem;

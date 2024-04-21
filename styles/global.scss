@@ -1,48 +1,72 @@
-@use './partials/mixin.scss' as *;
-@use './partials/variables.scss' as *;
+@use "./partials/mixin.scss" as *;
+@use "./partials/variables.scss" as *;
 
-html{
-    font-size: 62.5%;
+html {
+  font-size: 62.5%;
 }
 
-body{
-    font-size: 1.6rem;
+body {
+  font-size: 1.6rem;
 }
+
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("../assets/font/AvenirNextLTPro-Bold.woff2") format("woff2"),
+    url("../assets/font/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../assets/font/Alternative/AvenirNextLTProBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirNext-Demi";
+  src: url("../assets/font/AvenirNextLTPro-Demi.woff2") format("woff2"),
+    url("../assets/font/AvenirNextLTPro-Demi.otf") format("opentype"),
+    url("../assets/font/Alternative/AvenirNextLTProDemi.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("../assets/font/AvenirNextLTPro-Regular.woff2") format("woff2"),
+    url("../assets/font/AvenirNextLTPro-Regular.otf") format("opentype"),
+    url("../assets/font/Alternative/AvenirNextLTPro.ttf") format("truetype");
+}
+
+html {
+    font-family: "AvenirNext-Bold";
+    font-size: 5rem;
+    }
 
 h1 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 700;
 
-    @include tablet {
-        font-size: 6rem;
-        line-height: 6.8rem;
-        font-weight: 700;
-    }
+  @include tablet {
+    font-size: 6rem;
+    line-height: 6.8rem;
+    font-weight: 700;
+  }
 }
 
 h2 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-    font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: 700;
 
-    @include tablet {
-        font-size: 3.6rem;
-        line-height: 4.4rem;
-        font-weight: 700;
-    }
+  @include tablet {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+    font-weight: 700;
+  }
 }
 
 h3 {
-    font-size: 1.4rem;
-    line-height: 2.2rem;
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  font-weight: 600;
+
+  @include tablet {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
     font-weight: 600;
-
-    @include tablet {
-        font-size: 2.4rem;
-        line-height: 3.2rem;
-        font-weight: 600;
-    }
+  }
 }
-
-
