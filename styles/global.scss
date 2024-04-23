@@ -80,7 +80,7 @@ h3 {
   }
   &__nav-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     height: 100%;
   }
@@ -93,9 +93,21 @@ h3 {
     text-align: center;
   }
   &__nav-link {
-    border: 5px white solid;
-    padding: 1.6rem;
-    width: 100%;
     color: $primary-color-white;
+    text-align: center;
+  }
+  &__nav-list-wrapper{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.6rem;
+  }
+  &__nav-list-wrapper:hover{
+    border: 3px white solid;
+    background-color: $secondary-color-darkblack;
+  }
+  &__nav-list-wrapper--active{
+    border-bottom: 0.3rem $primary-color-white solid;
   }
 }
