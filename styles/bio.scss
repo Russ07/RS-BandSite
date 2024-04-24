@@ -16,7 +16,34 @@
     position: absolute;
     color: $primary-color-white;
     font-family: "AvenirNext-Bold";
-    width: 100%;
+    width: 90%;
     left: 1.6rem;
+  }
+}
+
+.about-section {
+  &__main-heading{
+    padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+    font-family: "AvenirNext-Bold";
+  }
+  &__img{
+    object-fit: cover;
+    width: 100%;
+
+  }
+  &__img-wrapper{
+    width: auto;
+    padding: 0 1.6rem 1.6rem 1.6rem;
+  }
+  &__copy-section{
+    padding:1.6rem 1.6rem 0 1.6rem;
+    @include body-copy-text;
+    font-weight: bold;
+  }
+  &__secondary-heading{
+    padding: 1.6rem;
+  }
+  &__description{
+    padding:1.6rem 1.6rem 0 1.6rem;
   }
 }
