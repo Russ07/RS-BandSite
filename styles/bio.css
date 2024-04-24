@@ -1,1 +1,19 @@
-/*# sourceMappingURL=bio.css.map */
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+.hero__image {
+  object-fit: cover;
+  object-position: center;
+  height: 30vh;
+  width: 100%;
+}
+.hero__heading {
+  position: absolute;
+  color: #FFFFFF;
+  font-family: "AvenirNext-Bold";
+  width: 100%;
+  left: 1.6rem;
+}/*# sourceMappingURL=bio.css.map */

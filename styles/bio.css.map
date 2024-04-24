@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":[],"names":[],"mappings":"","file":"bio.css"}
+{"version":3,"sourceRoot":"","sources":["bio.scss","partials/variables.scss"],"names":[],"mappings":"AAGA;EACE;EACA;EACA;EACA;;AACA;EACE;EACA;EACA;EACA;;AAEF;EACE;EACA,OCXkB;EDYlB;EACA;EACA","file":"bio.css"}

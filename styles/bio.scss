@@ -1,3 +1,22 @@
-@use './partials/mixin.scss' as *;
-@use './partials/variables.scss' as *;
+@use "./partials/mixin.scss" as *;
+@use "./partials/variables.scss" as *;
 
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  &__image {
+    object-fit: cover;
+    object-position: center;
+    height: 30vh;
+    width: 100%;
+  }
+  &__heading {
+    position: absolute;
+    color: $primary-color-white;
+    font-family: "AvenirNext-Bold";
+    width: 100%;
+    left: 1.6rem;
+  }
+}
