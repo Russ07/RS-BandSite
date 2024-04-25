@@ -18,6 +18,9 @@
   left: 1.6rem;
 }
 
+.about-section {
+  padding-bottom: 1.6rem;
+}
 .about-section__main-heading {
   padding: 2.4rem 1.6rem 1.6rem 1.6rem;
   font-family: "AvenirNext-Bold";
@@ -31,11 +34,11 @@
   padding: 0 1.6rem 1.6rem 1.6rem;
 }
 .about-section__copy-section {
-  padding: 1.6rem 1.6rem 0 1.6rem;
+  padding: 0 1.6rem 1.6rem 1.6rem;
   font-size: 1.3rem;
   line-height: 1.8rem;
   font-weight: 400;
-  font-weight: bold;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .about-section__copy-section {
@@ -45,8 +48,35 @@
   }
 }
 .about-section__secondary-heading {
-  padding: 1.6rem;
+  padding: 1.6rem 1.6rem 0 1.6rem;
 }
 .about-section__description {
   padding: 1.6rem 1.6rem 0 1.6rem;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .about-section__description {
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    font-weight: 400;
+  }
+}
+
+.gallery {
+  padding-top: 2.4rem;
+  background-color: #FAFAFA;
+}
+.gallery__heading {
+  padding: 0 1.6rem 1.6rem 1.6rem;
+}
+.gallery__img-wrapper {
+  width: auto;
+  padding: 0 1.6rem 0 1.6rem;
+}
+.gallery__img {
+  object-fit: cover;
+  width: 100%;
+  padding-bottom: 1.6rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -22,6 +22,7 @@
 }
 
 .about-section {
+  padding-bottom: 1.6rem;
   &__main-heading{
     padding: 2.4rem 1.6rem 1.6rem 1.6rem;
     font-family: "AvenirNext-Bold";
@@ -36,14 +37,32 @@
     padding: 0 1.6rem 1.6rem 1.6rem;
   }
   &__copy-section{
-    padding:1.6rem 1.6rem 0 1.6rem;
+    padding:0 1.6rem 1.6rem 1.6rem;
     @include body-copy-text;
-    font-weight: bold;
+    font-weight: 700;
   }
   &__secondary-heading{
-    padding: 1.6rem;
+    padding: 1.6rem 1.6rem 0 1.6rem;
   }
   &__description{
     padding:1.6rem 1.6rem 0 1.6rem;
+    @include body-copy-text;
+  }
+}
+
+.gallery{
+  padding-top: 2.4rem;
+  background-color: $secondary-color-alabaster;
+  &__heading{
+    padding: 0 1.6rem 1.6rem 1.6rem;
+  }
+  &__img-wrapper{
+    width: auto;
+    padding: 0 1.6rem 0 1.6rem;
+  }
+  &__img{
+    object-fit: cover;
+    width: 100%;
+    padding-bottom: 1.6rem;
   }
 }
