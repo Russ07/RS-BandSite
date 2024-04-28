@@ -96,9 +96,68 @@ h3 {
   padding: 1.6rem;
 }
 .header__nav-list-wrapper:hover {
-  border: 3px white solid;
+  border-bottom: 0.3rem white solid;
   background-color: #000000;
 }
 .header__nav-list-wrapper--active {
   border-bottom: 0.3rem #FFFFFF solid;
+}
+
+footer {
+  background-color: #323232;
+  color: #FFFFFF;
+}
+
+.getintouch-social {
+  padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+}
+.getintouch-social__heading {
+  padding-bottom: 1.6rem;
+}
+.getintouch-social__img-wrapper {
+  display: flex;
+}
+.getintouch-social__img {
+  padding-right: 4rem;
+}
+
+.footer-info-wrapper {
+  padding-left: 1.6rem;
+}
+.footer-info-wrapper__padding {
+  padding-bottom: 1.6rem;
+}
+.footer-info-wrapper__copytext {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .footer-info-wrapper__copytext {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
+}
+.footer-info-wrapper__email-link {
+  color: #FFFFFF;
+}
+
+.footer-copyright {
+  padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+}
+.footer-copyright__heading {
+  padding-bottom: 1.6rem;
+}
+.footer-copyright__copytext {
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .footer-copyright__copytext {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=global.css.map */

@@ -104,7 +104,7 @@ h3 {
     padding: 1.6rem;
   }
   &__nav-list-wrapper:hover{
-    border: 3px white solid;
+    border-bottom: 0.3rem white solid;
     background-color: $secondary-color-darkblack;
   }
   &__nav-list-wrapper--active{
@@ -112,5 +112,44 @@ h3 {
   }
 }
 
+footer{
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+}
 
+.getintouch-social{
+  padding: 2.4rem 1.6rem 1.6rem 1.6rem;
+  &__heading{
+    padding-bottom: 1.6rem;
+  }
+  &__img-wrapper{
+    display: flex;
+  }
+  &__img{
+    padding-right: 4rem;
+  }
+}
 
+.footer-info-wrapper{
+  padding-left: 1.6rem;
+  &__padding{
+    padding-bottom: 1.6rem;
+  }
+  &__copytext{
+    @include footer-copy-text;
+  }
+  &__email-link{
+    color: $primary-color-white;
+  }
+
+}
+
+.footer-copyright{
+  padding: 2.4rem 1.6rem 2.4rem 1.6rem;
+  &__heading{
+    padding-bottom: 1.6rem;
+  }
+  &__copytext{
+    @include footer-copy-text;
+  }
+}
