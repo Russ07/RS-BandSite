@@ -129,7 +129,7 @@ h3 {
       border-bottom: 0.3rem $primary-color-white solid;
     }
     &__nav-list-wrapper:hover {
-      border: none;
+      border-bottom: 0.3rem $primary-color-white solid;
       background-color: $secondary-color-darkblack;
     }
     &__nav-list {
@@ -194,6 +194,7 @@ footer {
       width: 100%;
     }
     &__logo {
+      display: block;
       padding-bottom: 1.6rem;
       padding-right: 2.4rem;
     }
