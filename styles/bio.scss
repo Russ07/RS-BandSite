@@ -162,6 +162,12 @@ background: rgba(50, 50, 50, 0.5);
     &__img-mid{
       padding-left: 2.4rem;
       padding-right: 2.4rem;
-    }  
+    }
+    &__img{
+      filter: grayscale(100%);
+    }
+    &__img:hover{
+      filter: none;
+    }
   }
 }

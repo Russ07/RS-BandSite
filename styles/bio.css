@@ -180,4 +180,10 @@
     padding-left: 2.4rem;
     padding-right: 2.4rem;
   }
+  .gallery__img {
+    filter: grayscale(100%);
+  }
+  .gallery__img:hover {
+    filter: none;
+  }
 }/*# sourceMappingURL=bio.css.map */
