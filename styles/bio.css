@@ -148,6 +148,7 @@
 }
 @media screen and (min-width: 768px) {
   .gallery {
+    padding-top: 3.6rem;
     padding-bottom: 2.4rem;
   }
   .gallery__heading {
@@ -162,10 +163,11 @@
   }
   .gallery__img {
     width: 31.8%;
+    padding-bottom: 2.4rem;
   }
   .gallery__img-mid {
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 }
 @media screen and (min-width: 1280px) {
