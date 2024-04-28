@@ -130,6 +130,21 @@ h3 {
     padding-bottom: 2.5rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    margin-left: 6.3rem;
+  }
+  .header__nav-container {
+    width: 30%;
+    justify-content: center;
+  }
+  .header__nav-list-wrapper {
+    width: 100%;
+  }
+  .header__nav-list {
+    width: 100%;
+  }
+}
 
 footer {
   background-color: #323232;
@@ -173,6 +188,14 @@ footer {
     padding-right: 2.4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .getintouch-social__heading {
+    padding-left: 6.3rem;
+  }
+  .getintouch-social__logo {
+    padding-right: 6.3rem;
+  }
+}
 
 .footer-info-wrapper {
   padding-left: 1.6rem;
@@ -213,6 +236,12 @@ footer {
     font-weight: 700;
   }
 }
+@media screen and (min-width: 1280px) {
+  .footer-info-wrapper {
+    padding-left: 6.3rem;
+    margin-right: 30%;
+  }
+}
 
 .footer-copyright {
   padding: 2.4rem 1.6rem 2.4rem 1.6rem;
@@ -239,5 +268,10 @@ footer {
   }
   .footer-copyright__logo {
     display: none;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer-copyright {
+    padding-left: 6.3rem;
   }
 }/*# sourceMappingURL=global.css.map */

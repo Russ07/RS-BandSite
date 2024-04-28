@@ -96,101 +96,125 @@ h3 {
     color: $primary-color-white;
     text-align: center;
   }
-  &__nav-list-wrapper{
+  &__nav-list-wrapper {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1.6rem;
   }
-  &__nav-list-wrapper:hover{
+  &__nav-list-wrapper:hover {
     border-bottom: 0.3rem white solid;
     background-color: $secondary-color-darkblack;
   }
-  &__nav-list-wrapper--active{
+  &__nav-list-wrapper--active {
     border-bottom: 0.3rem $primary-color-white solid;
   }
-  @include tablet{
+  @include tablet {
     display: flex;
     flex-direction: row;
-    &__logo{
+    &__logo {
       padding: 2.4rem;
     }
-    &__nav{
+    &__nav {
       width: 40%;
       padding-left: 2.4rem;
     }
-    &__nav-list-wrapper{
+    &__nav-list-wrapper {
       padding: 0;
       border: none;
     }
 
-    &__nav-list--active{
+    &__nav-list--active {
       border-bottom: 0.3rem $primary-color-white solid;
     }
-    &__nav-list-wrapper:hover{
+    &__nav-list-wrapper:hover {
       border: none;
       background-color: $secondary-color-darkblack;
     }
-    &__nav-list{
+    &__nav-list {
       padding-top: 2.5rem;
       padding-bottom: 2.5rem;
     }
   }
+  @include desktop {
+    &__logo {
+      margin-left: 6.3rem;
+    }
+    &__nav-container {
+      width: 30%;
+      justify-content: center;
+    }
+    &__nav-list-wrapper {
+      width: 100%;
+    }
+    &__nav-list {
+      width: 100%;
+    }
+  }
 }
 
-footer{
+footer {
   background-color: $primary-color-black;
   color: $primary-color-white;
 }
 
-.getintouch-social{
+.getintouch-social {
   padding: 2.4rem 1.6rem 1.6rem 1.6rem;
-  &__heading{
+  &__heading {
     padding-bottom: 1.6rem;
   }
-  &__img-wrapper{
+  &__img-wrapper {
     display: flex;
   }
-  &__img{
+  &__img {
     padding-right: 4rem;
   }
-  @include tablet{
+  @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 0;
     padding-right: 0;
-  
-  &__heading{
-    padding-left: 2.4rem;
-    margin-right:2.4rem;
-    min-width: 24rem;
+
+    &__heading {
+      padding-left: 2.4rem;
+      margin-right: 2.4rem;
+      min-width: 24rem;
+    }
+    &__img-wrapper {
+      display: flex;
+      align-items: center;
+      padding-bottom: 1.6rem;
+      // margin-right: 24%;
+      justify-self: flex-start;
+      width: 100%;
+    }
+    &__logo {
+      padding-bottom: 1.6rem;
+      padding-right: 2.4rem;
+    }
   }
-  &__img-wrapper{
-    display: flex;
-    align-items: center;
-    padding-bottom: 1.6rem;
-    // margin-right: 24%;
-    justify-self: flex-start;
-    width: 100%;
+  @include desktop{
+    &__heading {
+      padding-left: 6.3rem;
+    }
+    &__logo {
+      padding-right: 6.3rem;
+    }
+
   }
-  &__logo{
-    padding-bottom: 1.6rem;
-    padding-right: 2.4rem;
-  }
-}
 }
 
-.footer-info-wrapper{
+.footer-info-wrapper {
   padding-left: 1.6rem;
-  &__padding{
+  &__padding {
     padding-bottom: 1.6rem;
   }
-  &__copytext{
+  &__copytext {
     @include footer-copy-text;
   }
-  &__email-link{
+  &__email-link {
     color: $primary-color-white;
   }
   @include tablet {
@@ -198,32 +222,39 @@ footer{
     justify-content: space-between;
     padding-left: 2.4rem;
     padding-right: 2.4rem;
-    &__section{
+    &__section {
       display: flex;
       flex-direction: column;
       width: auto;
     }
-    &__heading{
+    &__heading {
       font-size: 1.4rem;
       line-height: 2rem;
       font-weight: 700;
     }
   }
+  @include desktop{
+    padding-left: 6.3rem;
+    margin-right: 30%;
+  }
 }
 
-.footer-copyright{
+.footer-copyright {
   padding: 2.4rem 1.6rem 2.4rem 1.6rem;
-  &__logo{
+  &__logo {
     padding-bottom: 1.6rem;
   }
-  &__copytext{
+  &__copytext {
     @include footer-copy-text;
   }
-  @include tablet{
+  @include tablet {
     padding-left: 2.4rem;
     padding-right: 2.4rem;
-    &__logo{
+    &__logo {
       display: none;
     }
+  }
+  @include desktop{
+    padding-left: 6.3rem;
   }
 }

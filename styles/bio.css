@@ -38,6 +38,11 @@
     left: 2.4rem;
   }
 }
+@media screen and (min-width: 1280px) {
+  .hero__heading {
+    left: 6.3rem;
+  }
+}
 
 .about-section {
   padding-bottom: 1.6rem;
@@ -107,6 +112,23 @@
     display: flex;
   }
 }
+@media screen and (min-width: 1280px) {
+  .about-section__main-heading {
+    padding-left: 6.3rem;
+  }
+  .about-section__copy-section {
+    font-size: 1.8rem;
+    font-weight: 900;
+    width: 50%;
+  }
+  .about-section__copy-section-name {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .about-section__img {
+    height: 60vh;
+  }
+}
 
 .gallery {
   padding-top: 2.4rem;
@@ -144,5 +166,18 @@
   .gallery__img-mid {
     padding-left: 1.6rem;
     padding-right: 1.6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .gallery__heading {
+    padding-left: 6.3rem;
+  }
+  .gallery__img-wrapper {
+    padding-left: 6.3rem;
+    padding-right: 6.3rem;
+  }
+  .gallery__img-mid {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
   }
 }/*# sourceMappingURL=bio.css.map */

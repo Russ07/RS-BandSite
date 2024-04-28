@@ -40,6 +40,11 @@ background: rgba(50, 50, 50, 0.5);
       left: 2.4rem;
     }
   }
+  @include desktop{
+    &__heading {
+      left: 6.3rem;
+    }
+  }
 }
 
 .about-section {
@@ -92,6 +97,23 @@ background: rgba(50, 50, 50, 0.5);
       display: flex;
     }
   }
+  @include desktop {
+    &__main-heading{
+      padding-left: 6.3rem;
+    }
+    &__copy-section{
+      font-size: 1.8rem;
+      font-weight: 900;
+      width: 50%;
+    }
+    &__copy-section-name{
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+    &__img{
+      height: 60vh;
+    }
+  }
 }
 
 .gallery{
@@ -128,5 +150,18 @@ background: rgba(50, 50, 50, 0.5);
       padding-left: 1.6rem;
       padding-right: 1.6rem;
     }
+  }
+  @include desktop{
+    &__heading{
+      padding-left: 6.3rem;
+    }
+    &__img-wrapper{
+      padding-left: 6.3rem;
+      padding-right: 6.3rem;
+    }
+    &__img-mid{
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+    }  
   }
 }
