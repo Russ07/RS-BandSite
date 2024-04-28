@@ -32,6 +32,14 @@ background: rgba(50, 50, 50, 0.5);
     width: 90%;
     left: 1.6rem;
   }
+  @include tablet{
+    &__image{
+      height: 70vh;
+    }
+    &__heading {
+      left: 2.4rem;
+    }
+  }
 }
 
 .about-section {
@@ -61,6 +69,29 @@ background: rgba(50, 50, 50, 0.5);
     padding:1.6rem 1.6rem 0 1.6rem;
     @include body-copy-text;
   }
+  @include tablet{
+    &__main-heading{
+      padding-left: 2.4rem;
+    }
+    &__img-wrapper{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    &__copy-section{
+      margin-left: 10%;
+      margin-right: 10%;
+      font-weight: 700;
+    }
+    &__secondary-heading{
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+    &__text-wrapper{
+      margin-left: 10%;
+      margin-right: 10%;
+      display: flex;
+    }
+  }
 }
 
 .gallery{
@@ -77,5 +108,25 @@ background: rgba(50, 50, 50, 0.5);
     object-fit: cover;
     width: 100%;
     padding-bottom: 1.6rem;
+  }
+  @include tablet{
+    padding-bottom: 2.4rem;
+    &__heading{
+      padding-left: 2.4rem;
+    }
+    &__img-wrapper{
+      padding-left: 2.4rem;
+      padding-right: 2.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    &__img{
+      width: 31.8%;
+    }
+    &__img-mid{
+      padding-left: 1.6rem;
+      padding-right: 1.6rem;
+    }
   }
 }

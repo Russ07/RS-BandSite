@@ -102,6 +102,34 @@ h3 {
 .header__nav-list-wrapper--active {
   border-bottom: 0.3rem #FFFFFF solid;
 }
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+  }
+  .header__logo {
+    padding: 2.4rem;
+  }
+  .header__nav {
+    width: 40%;
+    padding-left: 2.4rem;
+  }
+  .header__nav-list-wrapper {
+    padding: 0;
+    border: none;
+  }
+  .header__nav-list--active {
+    border-bottom: 0.3rem #FFFFFF solid;
+  }
+  .header__nav-list-wrapper:hover {
+    border: none;
+    background-color: #000000;
+  }
+  .header__nav-list {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
 
 footer {
   background-color: #323232;
@@ -119,6 +147,31 @@ footer {
 }
 .getintouch-social__img {
   padding-right: 4rem;
+}
+@media screen and (min-width: 768px) {
+  .getintouch-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .getintouch-social__heading {
+    padding-left: 2.4rem;
+    margin-right: 2.4rem;
+    min-width: 24rem;
+  }
+  .getintouch-social__img-wrapper {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1.6rem;
+    justify-self: flex-start;
+    width: 100%;
+  }
+  .getintouch-social__logo {
+    padding-bottom: 1.6rem;
+    padding-right: 2.4rem;
+  }
 }
 
 .footer-info-wrapper {
@@ -142,11 +195,29 @@ footer {
 .footer-info-wrapper__email-link {
   color: #FFFFFF;
 }
+@media screen and (min-width: 768px) {
+  .footer-info-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  .footer-info-wrapper__section {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+  }
+  .footer-info-wrapper__heading {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 700;
+  }
+}
 
 .footer-copyright {
   padding: 2.4rem 1.6rem 2.4rem 1.6rem;
 }
-.footer-copyright__heading {
+.footer-copyright__logo {
   padding-bottom: 1.6rem;
 }
 .footer-copyright__copytext {
@@ -159,5 +230,14 @@ footer {
     font-size: 1.4rem;
     line-height: 2rem;
     font-weight: 400;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-copyright {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
+  .footer-copyright__logo {
+    display: none;
   }
 }/*# sourceMappingURL=global.css.map */
