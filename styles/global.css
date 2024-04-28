@@ -157,6 +157,9 @@ footer {
 .getintouch-social__heading {
   padding-bottom: 1.6rem;
 }
+.getintouch-social__logo {
+  display: none;
+}
 .getintouch-social__img-wrapper {
   display: flex;
 }
