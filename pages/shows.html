@@ -1,14 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BANDSITE</title>
-    <link rel="stylesheet" href="styles/global-reset.css" />
-    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="../styles/global-reset.css" />
+    <link rel="stylesheet" href="../styles/global.css" />
     <link rel="stylesheet" href="../styles/shows.css" />
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a class="header__logo-link" href="index.html">
+          <img src="../assets/Logo/Logo-bandsite.svg" alt="BANDSITE" />
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__nav-container">
+          <span
+            class="header__nav-list-wrapper header__nav-list-wrapper--active"
+          >
+            <li class="header__nav-list header__nav-list--active">
+              <a class="header__nav-link" href="">Biography</a>
+            </li>
+          </span>
+          <span class="header__nav-list-wrapper">
+            <li class="header__nav-list">
+              <a class="header__nav-link" href="">Shows</a>
+            </li>
+          </span>
+        </ul>
+      </nav>
+    </header>
+    <div class="hero-shows">
+      <img
+        class="hero-shows__image"
+        src="../assets/Images/hero-shows.jpg"
+        alt="dancing hands"
+      />
+      <span class="hero__wrap"></span>
+      <div class="hero-shows__wrapper">
+        <div class="hero-shows__text">
+          <h4 class="hero-shows__heading4">Beautiful Beasts Album</h4>
+          <h2 class="hero-shows__heading2">Stripes of Yellow x For The Stings</h2>
+        </div>
+        <iframe
+          class="hero-shows__iframe"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/256075003&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+          frameborder="0"
+        >
+        </iframe>
+      </div>
+    </div>
+    <footer>
+      <div class="getintouch-social">
+        <h2 class="getintouch-social__heading">Get in Touch</h2>
+        <div class="getintouch-social__img-wrapper">
+          <a href="https://www.instagram.com">
+            <img
+              class="getintouch-social__img"
+              src="../assets/Icons/SVG/Icon-instagram.svg"
+              alt="instagram"
+            />
+          </a>
+          <a href="https://www.facebook.com">
+            <img
+              class="getintouch-social__img"
+              src="../assets/Icons/SVG/Icon-facebook.svg"
+              alt="facebook"
+            />
+          </a>
+          <a href="https://twitter.com/">
+            <img
+              class="getintouch-social__img"
+              src="../assets/Icons/SVG/Icon-twitter.svg"
+              alt="x"
+            />
+          </a>
+        </div>
+        <div class="getintouch-social__logo">
+          <a href="index.html">
+            <img src="../assets/Logo/Logo-bandsite.svg" alt="BANDSITE" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-info-wrapper">
+        <div class="footer-info-wrapper__address footer-info-wrapper__section">
+          <h3 class="footer-info-wrapper__heading footer-info-wrapper__padding">
+            The Bees Knees Management
+          </h3>
+          <p class="footer-info-wrapper__copytext">503 Broadway Penthouse,</p>
+          <p class="footer-info-wrapper__copytext footer-info-wrapper__padding">
+            New York, NY 10012, USA
+          </p>
+          <p class="footer-info-wrapper__email footer-info-wrapper__padding">
+            <a
+              class="footer-info-wrapper__email-link"
+              href="mailto:info@thebeesknees.com"
+              >info@thebeesknees.com</a
+            >
+          </p>
+        </div>
+        <div
+          class="footer-info-wrapper__booking-us footer-info-wrapper__section"
+        >
+          <h3 class="footer-info-wrapper__heading footer-info-wrapper__padding">
+            Limitless Artist Group
+          </h3>
+          <p class="footer-info-wrapper__copytext">Booking Agent for</p>
+          <p class="footer-info-wrapper__copytext footer-info-wrapper__padding">
+            US / South America / Japan
+          </p>
+          <p class="footer-info-wrapper__email footer-info-wrapper__padding">
+            <a
+              class="footer-info-wrapper__email-link"
+              href="mailto:bookings@limitlessag.com"
+              >bookings@limitlessag.com</a
+            >
+          </p>
+        </div>
+        <div
+          class="footer-info-wrapper__booking-eu footer-info-wrapper__section"
+        >
+          <h3 class="footer-info-wrapper__heading footer-info-wrapper__padding">
+            ARCH Entertainment
+          </h3>
+          <p class="footer-info-wrapper__copytext">Booking Agent for</p>
+          <p class="footer-info-wrapper__copytext footer-info-wrapper__padding">
+            UK / EU / AU
+          </p>
+          <p class="footer-info-wrapper__email footer-info-wrapper__padding">
+            <a
+              class="footer-info-wrapper__email-link"
+              href="mailto:bookings@archentertainment.com"
+              >bookings@archentertainment.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="footer-copyright__logo">
+          <a href="index.html">
+            <img src="../assets/Logo/Logo-bandsite.svg" alt="BANDSITE" />
+          </a>
+        </div>
+        <p class="footer-copyright__copytext">
+          Copyright The Bees Knees © 2023 All Rights Reserved
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
