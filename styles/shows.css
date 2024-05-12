@@ -47,4 +47,33 @@
 }
 .hero-shows__heading2 {
   padding-top: 1.6rem;
+}
+@media screen and (min-width: 768px) {
+  .hero-shows {
+    justify-content: left;
+  }
+  .hero-shows__image {
+    height: 70vh;
+  }
+  .hero-shows__wrapper {
+    padding-left: 2.4rem;
+  }
+  .hero-shows__iframe {
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+    width: 55%;
+  }
+  .hero-shows__text {
+    width: 80%;
+  }
+  .hero-shows__heading4 {
+    padding-top: 3.6rem;
+    font-weight: 600;
+    font-size: 2.4rem;
+  }
+  .hero-shows__heading2 {
+    padding-top: 2.4rem;
+    font-size: 6rem;
+    line-height: 6.8rem;
+  }
 }/*# sourceMappingURL=shows.css.map */
