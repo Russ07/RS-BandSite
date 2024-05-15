@@ -79,15 +79,23 @@
 }
 @media screen and (min-width: 1280px) {
   .hero-shows__wrapper {
+    justify-content: space-evenly;
     flex-direction: row;
     align-items: end;
+    width: 91%;
+    padding-left: 4.5%;
+    padding-right: 4.5%;
   }
   .hero-shows__iframe {
     display: flex;
-    padding-left: 6.3rem;
     align-items: end;
   }
   .hero-shows__text {
-    padding-left: 6.3rem;
+    align-items: center;
+    padding-top: 3.6rem;
+    padding-bottom: 3.6rem;
+  }
+  .hero-shows__heading2 {
+    width: 80%;
   }
 }/*# sourceMappingURL=shows.css.map */
