@@ -76,4 +76,18 @@
     font-size: 6rem;
     line-height: 6.8rem;
   }
+}
+@media screen and (min-width: 1280px) {
+  .hero-shows__wrapper {
+    flex-direction: row;
+    align-items: end;
+  }
+  .hero-shows__iframe {
+    display: flex;
+    padding-left: 6.3rem;
+    align-items: end;
+  }
+  .hero-shows__text {
+    padding-left: 6.3rem;
+  }
 }/*# sourceMappingURL=shows.css.map */

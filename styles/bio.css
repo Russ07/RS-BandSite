@@ -148,7 +148,7 @@
 }
 @media screen and (min-width: 768px) {
   .gallery {
-    padding-top: 3.6rem;
+    padding-top: 3.4rem;
     padding-bottom: 2.4rem;
   }
   .gallery__heading {
@@ -162,7 +162,7 @@
     justify-content: center;
   }
   .gallery__img {
-    width: 31.8%;
+    width: 30%;
     padding-bottom: 2.4rem;
   }
   .gallery__img-mid {

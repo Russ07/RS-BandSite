@@ -77,4 +77,18 @@ background: rgba(50, 50, 50, 0.5);
       line-height: 6.8rem;
     }
   }
+  @include desktop{
+    &__wrapper{
+      flex-direction: row;
+      align-items:end;
+    }
+    &__iframe {
+      display: flex;
+      padding-left: 6.3rem;
+      align-items:end;
+    }
+    &__text{
+      padding-left: 6.3rem;
+    }
+  }
 }
