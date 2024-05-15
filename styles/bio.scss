@@ -135,22 +135,20 @@ background: rgba(50, 50, 50, 0.5);
     padding-top: 3.4rem;
     padding-bottom: 2.4rem;
     &__heading{
-      padding-left: 2.4rem;
+      padding-left: 3.6rem;
     }
     &__img-wrapper{
-      padding-left: 2.4rem;
-      padding-right: 2.4rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 2.4rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
     }
     &__img{
       width: 30%;
-      padding-bottom: 2.4rem;
-    }
-    &__img-mid{
-      padding-left: 2.4rem;
-      padding-right: 2.4rem;
+      padding: 0;
+      
     }
   }
   @include desktop{
@@ -158,12 +156,9 @@ background: rgba(50, 50, 50, 0.5);
       padding-left: 6.3rem;
     }
     &__img-wrapper{
-      padding-left: 6.3rem;
-      padding-right: 6.3rem;
-    }
-    &__img-mid{
-      padding-left: 2.4rem;
-      padding-right: 2.4rem;
+      padding-left: 2.3rem;
+      padding-right: 2.3rem;
+      gap: 3.6rem;
     }
     &__img{
       filter: grayscale(100%);
