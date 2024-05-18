@@ -101,6 +101,9 @@ background: rgba(50, 50, 50, 0.5);
   }
 }
 .shows{
+  &__table{
+    display: none;
+  }
   &__heading2{
     font-weight: 900;
     font-size: 2.9rem;
@@ -134,5 +137,32 @@ background: rgba(50, 50, 50, 0.5);
   }
   &__element-title{
     color: $secondary-color-mercury;
+  }
+  @include tablet {
+    &__wrapper{
+      display: none;
+    }
+    &__table-th{
+      width: 100%;
+      text-align: left;
+    }
+    &__table{
+      width: auto;
+      margin-bottom: 2.4rem;
+      margin-top: 2.4rem;
+      margin-right: 2.4rem;
+      margin-left: 2.4rem;
+      display: flex;
+      justify-content: center;
+    }
+    &__table-title-wrapper{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 2.4rem;
+    }
+    &__table-title-container{
+      width: 100%;
+    }
   }
 }

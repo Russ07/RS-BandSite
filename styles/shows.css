@@ -100,6 +100,9 @@
   }
 }
 
+.shows__table {
+  display: none;
+}
 .shows__heading2 {
   font-weight: 900;
   font-size: 2.9rem;
@@ -133,4 +136,31 @@
 }
 .shows__element-title {
   color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows__wrapper {
+    display: none;
+  }
+  .shows__table-th {
+    width: 100%;
+    text-align: left;
+  }
+  .shows__table {
+    width: auto;
+    margin-bottom: 2.4rem;
+    margin-top: 2.4rem;
+    margin-right: 2.4rem;
+    margin-left: 2.4rem;
+    display: flex;
+    justify-content: center;
+  }
+  .shows__table-title-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2.4rem;
+  }
+  .shows__table-title-container {
+    width: 100%;
+  }
 }/*# sourceMappingURL=shows.css.map */
