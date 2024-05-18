@@ -145,6 +145,7 @@ background: rgba(50, 50, 50, 0.5);
     &__table-th{
       width: 100%;
       text-align: left;
+      color: $secondary-color-mercury;
     }
     &__table{
       width: auto;
@@ -163,6 +164,30 @@ background: rgba(50, 50, 50, 0.5);
     }
     &__table-title-container{
       width: 100%;
+    }
+    &__heading2{
+      padding-left: 2.4rem;
+    }
+  }
+  @include desktop{
+    display: flex;
+    justify-content: space-between;
+    &__table{
+      margin-right: 6.3rem;
+      margin-left: 6.3rem;
+      width: 70%;
+    }
+    &__heading2{
+      padding-left: 6.3rem;
+      padding-top: 3.6rem;
+      width: 30%;
+    }
+    &__table-title-wrapper{
+      gap: 3.6rem;
+    }
+    &__table-title-container{
+      display: flex;
+      align-items: center;
     }
   }
 }

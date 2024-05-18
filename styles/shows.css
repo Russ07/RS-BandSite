@@ -144,6 +144,7 @@
   .shows__table-th {
     width: 100%;
     text-align: left;
+    color: #E1E1E1;
   }
   .shows__table {
     width: auto;
@@ -162,5 +163,31 @@
   }
   .shows__table-title-container {
     width: 100%;
+  }
+  .shows__heading2 {
+    padding-left: 2.4rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows {
+    display: flex;
+    justify-content: space-between;
+  }
+  .shows__table {
+    margin-right: 6.3rem;
+    margin-left: 6.3rem;
+    width: 70%;
+  }
+  .shows__heading2 {
+    padding-left: 6.3rem;
+    padding-top: 3.6rem;
+    width: 30%;
+  }
+  .shows__table-title-wrapper {
+    gap: 3.6rem;
+  }
+  .shows__table-title-container {
+    display: flex;
+    align-items: center;
   }
 }/*# sourceMappingURL=shows.css.map */
