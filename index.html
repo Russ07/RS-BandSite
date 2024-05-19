@@ -131,6 +131,25 @@
         />
       </div>
     </div>
+
+    <div class="comment">
+      <h2 class="comment__h2">Join the Conversation</h2>
+      <div class="comment__form-container">
+        <img class="comment__avatar-img" src="./assets/Images/Mohan-muruge.jpg" alt="Avatar image">
+      <form class="comment__form-wrapper" action="/submit_comment" method="post">
+        <div class="comment__element">
+          <label class="comment__form-label" for="name">NAME</label>
+          <input class="comment__form-input" placeholder="Enter your name" type="text" id="name" name="name" required>
+        </div>
+        <div class="comment__element">
+          <label class="comment__form-label" for="comment">COMMENT</label>
+          <textarea class="comment__form-textarea" placeholder="Add a new comment" id="comment" name="comment" rows="4" required></textarea>
+        </div>
+        <button class="comment__button" type="submit">COMMENT</button>
+      </form>
+      </div>
+    </div>
+
     <footer>
       <div class="getintouch-social">
         <h2 class="getintouch-social__heading">Get in Touch</h2>
