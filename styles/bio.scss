@@ -234,6 +234,7 @@ background: rgba(50, 50, 50, 0.5);
   }
   @include tablet{
     padding: 3.6rem;
+    padding-bottom: 0;
   }
   &__form-container{
     margin-left: 10% ;
@@ -249,8 +250,14 @@ background: rgba(50, 50, 50, 0.5);
     padding-bottom: 2.4rem;
   }
   &__button{
-    margin-left: 60%;
     width: 40%;
+    min-width: 16rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+  }
+  &__button-wrapper{
+    display: flex;
+    justify-content: right;
   }
   @include desktop{
     &__form-container{
@@ -261,5 +268,42 @@ background: rgba(50, 50, 50, 0.5);
     &__h2{
       padding-left: 2.7rem;
     }
+  }
+}
+
+.comment-section{
+  margin-bottom: 1.6rem;
+  &__img{
+    height: 4.8rem;
+    width: 4.8rem;
+    background-color: $secondary-color-mercury;
+    border-radius: 50%;
+    border: 0px;
+  }
+  &__container{
+    display: flex;
+    padding: 1.6rem;
+    width: auto;
+    border-bottom: 0.2rem solid $secondary-color-mercury;
+    padding-top: 2.4rem;
+  }
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    padding-left: 1.6rem;
+  }
+  &__name-date-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1.6rem;
+  }
+  @include tablet {
+    margin-left: 11%;
+    margin-right: 11%;
+  }
+  @include desktop{
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }

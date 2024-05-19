@@ -136,18 +136,24 @@
       <h2 class="comment__h2">Join the Conversation</h2>
       <div class="comment__form-container">
         <img class="comment__avatar-img" src="./assets/Images/Mohan-muruge.jpg" alt="bs">
-      <form class="comment__form-wrapper" action="/submit_comment" method="post">
+      <form id="commentForm" class="comment__form-wrapper" action="" method="post">
         <div class="comment__element">
           <label class="comment__form-label" for="name">NAME</label>
           <input class="comment__form-input" placeholder="Enter your name" type="text" id="name" name="name" required>
         </div>
         <div class="comment__element">
           <label class="comment__form-label" for="comment">COMMENT</label>
-          <textarea class="comment__form-textarea" placeholder="Add a new comment" id="comment" name="comment" rows="4" required></textarea>
+          <textarea class="comment__form-textarea" placeholder="Add a new comment" id="comment" name="comment" required></textarea>
         </div>
-        <button class="comment__button" type="submit">COMMENT</button>
+        <div class=" comment__button-wrapper">
+        <button id="eventButton" class="comment__button" type="submit">COMMENT</button>
+        </div>
       </form>
       </div>
+    </div>
+
+    <div id="data" class="comment-section">
+      
     </div>
 
     <footer>
@@ -247,5 +253,6 @@
         </p>
       </div>
     </footer>
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>
