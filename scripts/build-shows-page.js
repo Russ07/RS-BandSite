@@ -44,7 +44,7 @@ function insertData() {
   showList.forEach((x) => {
     tr += '<tr class="shows__table-elem">';
     tr +=
-      '<td class="shows__table-elem-td">' +
+      '<td class="shows__table-elem-td shows__table-elem-td-bold">' +
       x.date +
       "</td>" +
       '<td class="shows__table-elem-td">' +
@@ -54,7 +54,7 @@ function insertData() {
       x.location +
       "</td>" +
       '<td class="shows__table-elem-td">' +
-      "<button>" +
+      '<button class="shows__element-button">' +
       x.button +
       "</button>" +
       "</td>";
@@ -82,17 +82,16 @@ function insertDataMobile() {
       "</p>" +
       '<p class="shows__element-padding">' +
       x.venue +
-      '</p>' +
+      "</p>" +
       '<p class="shows__element-title">' +
       "Location" +
-      '</p>' +
+      "</p>" +
       '<p class="shows__element-padding">' +
       x.location +
-      '</p>' +
+      "</p>" +
       '<button class="shows__element-button">' +
       x.button +
-      '</button>';
-
+      "</button>";
 
     div += '</div class="shows__element">';
   });

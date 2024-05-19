@@ -104,6 +104,9 @@ background: rgba(50, 50, 50, 0.5);
   &__table{
     display: none;
   }
+  &__wrapper{
+    padding-bottom: 2.4rem;
+  }
   &__heading2{
     font-weight: 900;
     font-size: 2.9rem;
@@ -186,9 +189,21 @@ background: rgba(50, 50, 50, 0.5);
       justify-content: space-evenly;
       text-align: left;
       gap: 2.4rem;
+      padding-bottom: 2.4rem;
+      padding-top: 2.4rem;
+      border-bottom: 0.2rem solid $secondary-color-mercury;
     }
     &__table-elem-td{
       width: 100%;
+      display: flex;
+      align-items: center;
+
+    }
+    &__element-button{
+      margin: 0;
+    }
+    &__table-elem-td-bold{
+      font-weight: 900;
     }
   }
   @include desktop{
@@ -198,6 +213,8 @@ background: rgba(50, 50, 50, 0.5);
       margin-right: 6.3rem;
       margin-left: 6.3rem;
       width: 80%;
+      margin-top: 5.2rem;
+
     }
     &__heading2{
       padding-left: 6.3rem;
