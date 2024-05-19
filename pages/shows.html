@@ -55,8 +55,8 @@
     </div>
     <div class="shows">
       <h2 class="shows__heading2">Shows</h2>
-      <div class="shows__wrapper">
-        <div class="shows__element">
+      <div id="data" class="shows__wrapper" onload="insertDataMobile()" value="Insert">
+        <!-- <div class="shows__element">
           <p class="shows__element-title">DATE</p>
           <p class="shows__element-bold-text shows__element-padding">
             Mon Sept 09 2024
@@ -66,9 +66,10 @@
           <p class="shows__element-title">LOCATION</p>
           <p class="shows__element-padding">San Francisco, CA</p>
           <button class="shows__element-button">BUY TICKETS</button>
-        </div>
+        </div> -->
       </div>
-      <table id="my-table" class="shows__table">
+
+      <table id="my-table" class="shows__table" onload="insertData()" value="Insert">
         <thead class="shows__table-title-container">
           <tr class="shows__table-title-wrapper">
             <th class="shows__table-th">DATE</th>
@@ -77,8 +78,9 @@
             <th class="shows__table-th"></th>
           </tr>
         </thead>
-        <tbody id="data"></tbody>
+        <tbody id="datas" class="shows__table-body-wrapper"></tbody>
       </table>
+
     </div>
     <footer>
       <div class="getintouch-social">

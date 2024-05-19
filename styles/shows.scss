@@ -109,7 +109,7 @@ background: rgba(50, 50, 50, 0.5);
     font-size: 2.9rem;
     padding-left: 1.6rem;
     padding-top: 2.4rem;
-    padding-bottom: 3.6rem;
+    padding-bottom: 1.6rem;
   }
   &__element-button{
     margin-bottom: 1.6rem;
@@ -128,6 +128,9 @@ background: rgba(50, 50, 50, 0.5);
     flex-direction: column;
     padding-left: 1.6rem;
     padding-right: 1.6rem;
+    padding-bottom: 1.6rem;
+    padding-top: 2.4rem;
+    border-bottom: 0.2rem solid $secondary-color-mercury;
   }
   &__element-padding{
     padding-bottom: 1.2rem;
@@ -155,18 +158,37 @@ background: rgba(50, 50, 50, 0.5);
       margin-left: 2.4rem;
       display: flex;
       justify-content: center;
+      flex-direction: column;
     }
     &__table-title-wrapper{
       width: 100%;
       display: flex;
       justify-content: space-evenly;
       gap: 2.4rem;
+      padding-bottom: 2.4rem;
     }
     &__table-title-container{
       width: 100%;
     }
     &__heading2{
       padding-left: 2.4rem;
+    }
+    &__table-body-wrapper{
+      display: flex;
+      flex-direction: column;
+    }
+    &__table-body-wrapper{
+      width: 100%;
+    }
+    &__table-elem{
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      text-align: left;
+      gap: 2.4rem;
+    }
+    &__table-elem-td{
+      width: 100%;
     }
   }
   @include desktop{
@@ -184,10 +206,14 @@ background: rgba(50, 50, 50, 0.5);
     }
     &__table-title-wrapper{
       gap: 3.6rem;
+      padding-bottom: 3.6rem;
     }
     &__table-title-container{
       display: flex;
       align-items: center;
+    }
+    &__table-elem{
+      gap: 3.6rem;
     }
   }
 }
