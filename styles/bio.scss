@@ -170,6 +170,7 @@ background: rgba(50, 50, 50, 0.5);
 }
 .comment{
   padding: 1.6rem;
+  padding-bottom: 0;
   &__element{
     display: flex;
     flex-direction: column;
@@ -224,6 +225,8 @@ background: rgba(50, 50, 50, 0.5);
   }
   &__form-container{
     display: flex;
+    border-bottom: 0.2rem solid $secondary-color-mercury;
+    padding-bottom: 1.6rem;
   }
   &__form-wrapper{
     padding-left: 1.6rem;

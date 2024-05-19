@@ -186,6 +186,7 @@
 
 .comment {
   padding: 1.6rem;
+  padding-bottom: 0;
 }
 .comment__element {
   display: flex;
@@ -241,6 +242,8 @@
 }
 .comment__form-container {
   display: flex;
+  border-bottom: 0.2rem solid #E1E1E1;
+  padding-bottom: 1.6rem;
 }
 .comment__form-wrapper {
   padding-left: 1.6rem;
