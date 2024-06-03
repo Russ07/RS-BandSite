@@ -32,34 +32,84 @@ form.addEventListener("submit", (e)=>{
     insertDataComments();
 });
 
-function insertDataComments() {
-    let commentsBio = document.getElementById("data");
-    commentsBio.innerHTML = "";
-    let div = "";
-    comments.forEach((x) => {
-      div += '<div class="comment-section__container">';
-      div +=
-        '<img class= "comment-section__img">'+
-        '</img>'+
-        '<div class="comment-section__wrapper">'+
-        '<div class ="comment-section__name-date-wrapper">' +
-        '<p class="comment-section__name">' +
-        x.name +
-        "</p>" +
-        '<p class="comment-section__date">' +
-        x.date +
-        "</p>" +
-        "</div>" +
-        '<p class="comment-scetion__comment">' +
-        x.comment +
-        "</p>" +
-        "</div>"
+// function insertDataComments1() {
+//     let commentsBio = document.getElementById("data");
+//     commentsBio.innerHTML = "";
+//     let div = "";
+//     comments.forEach((x) => {
+//       div += '<div class="comment-section__container">';
+//       div +=
+//         '<img class= "comment-section__img">'+
+//         '</img>'+
+//         '<div class="comment-section__wrapper">'+
+//         '<div class ="comment-section__name-date-wrapper">' +
+//         '<p class="comment-section__name">' +
+//         x.name +
+//         "</p>" +
+//         '<p class="comment-section__date">' +
+//         x.date +
+//         "</p>" +
+//         "</div>" +
+//         '<p class="comment-scetion__comment">' +
+//         x.comment +
+//         "</p>" +
+//         "</div>"
   
-      div += '</div class="shows__element">';
-    });
-    commentsBio.innerHTML += div;
-  }
-  insertDataComments();
+//       div += '</div class="shows__element">';
+//     });
+//     commentsBio.innerHTML += div;
+//   }
+//   insertDataComments1();
+
+function insertDataComments() {
+  const commentsBio = document.querySelector(".comment-section");
+comments.forEach((x) => {
+        const commentDataContainer = document.createElement('div');
+        commentDataContainer.classList.add("comment-section__container");
+        commentsBio.appendChild(commentDataContainer);
+        const userImg = document.createElement('img');
+        userImg.classList.add("comment-section__img");
+        // userImg.src = x.avatar;
+        commentDataContainer.appendChild(userImg);
+        const commentDataWrapper = document.createElement('div');
+        commentDataWrapper.classList.add("comment-section__wrapper");
+        commentDataContainer.appendChild(commentDataWrapper);
+        const commentDataNameDate = document.createElement('div');
+        commentDataNameDate.classList.add("comment-section__name-date-wrapper");
+        commentDataWrapper.appendChild(commentDataNameDate);
+        const commentDataName = document.createElement('p');
+        commentDataName.classList.add("comment-section__name");
+        commentDataName.innerText =  x.name;
+        commentDataNameDate.appendChild(commentDataName);
+        const commentDataDate = document.createElement('p');
+        commentDataDate.classList.add("comment-section__date");
+        commentDataDate.innerText =  x.date;
+        commentDataNameDate.appendChild(commentDataDate);
+        const commentDataComment = document.createElement('p');
+        commentDataComment.classList.add("comment-section__comment");
+        commentDataComment.innerText =  x.comment;
+        commentDataWrapper.appendChild(commentDataComment);
+});
+
+}
+
+insertDataComments();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //   const commentName = document.createElement('p');
 
