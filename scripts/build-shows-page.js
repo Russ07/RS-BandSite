@@ -37,32 +37,32 @@ const showList = [
   },
 ];
 
-function insertData() {
-  let table = document.getElementById("datas");
-  table.innerHTML = "";
-  let tr = "";
-  showList.forEach((x) => {
-    tr += '<tr class="shows__table-elem">';
-    tr +=
-      '<td class="shows__table-elem-td shows__table-elem-td-bold">' +
-      x.date +
-      "</td>" +
-      '<td class="shows__table-elem-td">' +
-      x.venue +
-      "</td>" +
-      '<td class="shows__table-elem-td">' +
-      x.location +
-      "</td>" +
-      '<td class="shows__table-elem-td">' +
-      '<button class="shows__element-button">' +
-      x.button +
-      "</button>" +
-      "</td>";
-    tr += "</tr>";
-  });
-  table.innerHTML += tr;
-}
-insertData();
+// function insertData() {
+//   let table = document.getElementById("datas");
+//   table.innerHTML = "";
+//   let tr = "";
+//   showList.forEach((x) => {
+//     tr += '<tr class="shows__table-elem">';
+//     tr +=
+//       '<td class="shows__table-elem-td shows__table-elem-td-bold">' +
+//       x.date +
+//       "</td>" +
+//       '<td class="shows__table-elem-td">' +
+//       x.venue +
+//       "</td>" +
+//       '<td class="shows__table-elem-td">' +
+//       x.location +
+//       "</td>" +
+//       '<td class="shows__table-elem-td">' +
+//       '<button class="shows__element-button">' +
+//       x.button +
+//       "</button>" +
+//       "</td>";
+//     tr += "</tr>";
+//   });
+//   table.innerHTML += tr;
+// }
+// insertData();
 
 function insertDataMobile() {
   let showsMobile = document.getElementById("data");
@@ -98,3 +98,40 @@ function insertDataMobile() {
   showsMobile.innerHTML += div;
 }
 insertDataMobile();
+
+function insertData() {
+  const table = document.querySelector(".shows__table-body-wrapper");
+  showList.forEach((x) => {
+
+    const bioElementContainer = document.createElement('tr');
+    bioElementContainer.classList.add("shows__table-elem");
+    table.appendChild(bioElementContainer);
+
+    const elementDate = document.createElement('td');
+    elementDate.classList.add("shows__table-elem-td");
+    elementDate.classList.add("shows__table-elem-td-bold");
+    elementDate.innerText = x.date;
+    bioElementContainer.appendChild(elementDate);
+
+    const elementVenue = document.createElement("td");
+    elementVenue.classList.add("shows__table-elem-td");
+    elementVenue.innerText = x.venue;
+    bioElementContainer.appendChild(elementVenue);
+
+    const elementLocation = document.createElement("td");
+    elementLocation.classList.add("shows__table-elem-td");
+    elementLocation.innerText = x.location;
+    bioElementContainer.appendChild(elementLocation);
+
+    const elementButtonWrapper = document.createElement("td");
+    elementButtonWrapper.classList.add("shows__table-elem-td");
+    bioElementContainer.appendChild(elementButtonWrapper);
+    
+    const elementButton = document.createElement("button");
+    elementButton.classList.add("shows__element-button");
+    elementButton.innerText = "Buy Tickets";
+    elementButtonWrapper.appendChild(elementButton);
+  });
+}
+
+insertData();
