@@ -64,40 +64,40 @@ const showList = [
 // }
 // insertData();
 
-function insertDataMobile() {
-  let showsMobile = document.getElementById("data");
-  showsMobile.innerHTML = "";
-  let div = "";
-  showList.forEach((x) => {
-    div += '<div class="shows__element">';
-    div +=
-      '<p class="shows__element-title">' +
-      "DATE" +
-      "</p>" +
-      '<p class="shows__element-bold-text shows__element-padding">' +
-      x.date +
-      "</p>" +
-      '<p class="shows__element-title">' +
-      "VENUE" +
-      "</p>" +
-      '<p class="shows__element-padding">' +
-      x.venue +
-      "</p>" +
-      '<p class="shows__element-title">' +
-      "Location" +
-      "</p>" +
-      '<p class="shows__element-padding">' +
-      x.location +
-      "</p>" +
-      '<button class="shows__element-button">' +
-      x.button +
-      "</button>";
+// function insertDataMobile() {
+//   let showsMobile = document.getElementById("data");
+//   showsMobile.innerHTML = "";
+//   let div = "";
+//   showList.forEach((x) => {
+//     div += '<div class="shows__element">';
+//     div +=
+//       '<p class="shows__element-title">' +
+//       "DATE" +
+//       "</p>" +
+//       '<p class="shows__element-bold-text shows__element-padding">' +
+//       x.date +
+//       "</p>" +
+//       '<p class="shows__element-title">' +
+//       "VENUE" +
+//       "</p>" +
+//       '<p class="shows__element-padding">' +
+//       x.venue +
+//       "</p>" +
+//       '<p class="shows__element-title">' +
+//       "Location" +
+//       "</p>" +
+//       '<p class="shows__element-padding">' +
+//       x.location +
+//       "</p>" +
+//       '<button class="shows__element-button">' +
+//       x.button +
+//       "</button>";
 
-    div += '</div class="shows__element">';
-  });
-  showsMobile.innerHTML += div;
-}
-insertDataMobile();
+//     div += '</div class="shows__element">';
+//   });
+//   showsMobile.innerHTML += div;
+// }
+// insertDataMobile();
 
 function insertData() {
   const table = document.querySelector(".shows__table-body-wrapper");
@@ -135,3 +135,51 @@ function insertData() {
 }
 
 insertData();
+
+function insertDataMobile() {
+  const showsMobile = document.querySelector(".shows__wrapper");
+  showList.forEach((x) => {
+    const showsElementContainer = document.createElement('div');
+    showsElementContainer.classList.add("shows__element");
+    showsMobile.appendChild(showsElementContainer);
+
+    const showsDateTitle = document.createElement('p');
+    showsDateTitle.classList.add("shows__element-title");
+    showsDateTitle.innerText ="DATE";
+    showsElementContainer.appendChild(showsDateTitle);
+
+    const showsDate = document.createElement('p');
+    showsDate.classList.add("shows__element-bold-text");
+    showsDate.classList.add("shows__element-padding");
+    showsDate.innerHTML = x.date;
+    showsElementContainer.appendChild(showsDate);
+
+    const showsVenueTitle = document.createElement('p');
+    showsVenueTitle.classList.add("shows__element-title");
+    showsVenueTitle.innerHTML ="Venue";
+    showsElementContainer.appendChild(showsVenueTitle);
+
+    const showsVenue = document.createElement('p');
+    showsVenue.classList.add("shows__element-padding");
+    showsVenue.innerHTML = x.venue;
+    showsElementContainer.appendChild(showsVenue);
+
+    const showsLocationTitle = document.createElement('p');
+    showsLocationTitle.classList.add("shows__element-title");
+    showsLocationTitle.innerHTML = "Location";
+    showsElementContainer.appendChild(showsLocationTitle);
+
+    const showsLocation = document.createElement('p');
+    showsLocation.classList.add("shows__element-padding");
+    showsLocation.innerHTML = x.location;
+    showsElementContainer.appendChild(showsLocation);
+
+    const showsButton = document.createElement('button');
+    showsButton.classList.add("shows__element-button");
+    showsButton.innerHTML = "BUY TICKETS";
+    showsElementContainer.appendChild(showsButton);
+  });
+
+}
+
+insertDataMobile();
