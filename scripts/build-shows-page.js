@@ -99,6 +99,8 @@
 // }
 // insertDataMobile();
 import  {apiCall} from "./band-site-api.js";
+const showList = await apiCall.getShows();
+console.log(showList);
 
 function insertData() {
   const table = document.querySelector(".shows__table-body-wrapper");
@@ -116,7 +118,7 @@ function insertData() {
 
     const elementVenue = document.createElement("td");
     elementVenue.classList.add("shows__table-elem-td");
-    elementVenue.innerText = x.venue;
+    elementVenue.innerText = x.place;
     bioElementContainer.appendChild(elementVenue);
 
     const elementLocation = document.createElement("td");
