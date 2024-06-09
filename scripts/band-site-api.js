@@ -17,6 +17,16 @@ getComments = async () => {
     }
 };
 
+getShows = async () => {
+    try {
+        const getResponse = await axios.get(`${this.baseUrl}showdates/?api_key="${this.apiKey}"`);
+        const getResponseData = getResponse.data; 
+        return getResponseData;
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 postComment = async (getNewComment) => {
     const jsonObjectComment = JSON.stringify(getNewComment);
     try {
