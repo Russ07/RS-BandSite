@@ -28,15 +28,28 @@ getShows = async () => {
 };
 
 postComment = async (getNewComment) => {
-    const jsonObjectComment = JSON.stringify(getNewComment);
+    // const jsonObjectComment = JSON.stringify(getNewComment);
+    console.log(getNewComment);
     try {
-        const postNewComment = await axios.post(`${this.baseUrl}/comments/?api_key="${this.apiKey}"`,jsonObjectComment);
-
-
+        // const popped = await axios.post(`${this.baseUrl}/comments/?api_key="${this.apiKey}"`).pop();
+        const postNewComment = await axios.post(`${this.baseUrl}/comments/?api_key="${this.apiKey}"`,getNewComment);
+        return postNewComment;
     } catch (error) {
         console.log(error)
     }
 }
+
+// putLike = async (updateLike) => {
+//     // const jsonObjectComment = JSON.stringify(getNewComment);
+//     console.log(updateLike);
+//     try {
+//         // const popped = await axios.post(`${this.baseUrl}/comments/?api_key="${this.apiKey}"`).pop();
+//         const postNewLike = await axios.post(`${this.baseUrl}/comments/${updateLike}/like?api_key="${this.apiKey}"`,getNewComment);
+//         return postNewLike;
+//     } catch (error) {
+//         console.log(error)
+//     }
+// }
 
 }
 export const apiCall = new BandApi(apiKeyGet);

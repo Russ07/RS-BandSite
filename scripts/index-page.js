@@ -19,7 +19,8 @@
 
 import  {apiCall} from "./band-site-api.js";
 const dataComment = await apiCall.getComments();
-
+dataComment.sort((a, b) => b.timestamp - a.timestamp);
+console.log(dataComment);
 
 function convertDate(Timestamp) {
   const date = new Date(Timestamp);
@@ -27,17 +28,19 @@ function convertDate(Timestamp) {
   return date.toLocaleDateString(undefined, options);
 }
 
-function moveLastToFront(array) {
-  if (array.length > 0) {
-      const lastItem = array.pop(); 
-      array.unshift(lastItem); 
-  }
-  return array;
-}
-const modifiedDataComment = moveLastToFront(dataComment);
+// function moveLastToFront(array) {
+//   if (array.length > 0) {
+//       const lastItem = array.pop(); 
+//       array.unshift(lastItem); 
+//   }
+//   return array;
+
+
+// }
+// const modifiedDataComment = moveLastToFront(dataComment);
 
 const form = document.getElementById("commentForm");
-form.addEventListener("submit", (e)=>{
+form.addEventListener("submit", async (e)=>{
     e.preventDefault();
     const nameValue = e.target.name.value;
     const commentValue = e.target.comment.value;
@@ -47,8 +50,13 @@ form.addEventListener("submit", (e)=>{
         timestamp: new Date().toLocaleDateString(),
         
     };
-    apiCall.postComment(dataToObject);
-    modifiedDataComment.unshift(dataToObject);
+    const dataToObjectApi = {
+      name: nameValue,
+      comment: commentValue,
+      
+  };
+    await apiCall.postComment(dataToObjectApi);
+    dataComment.unshift(dataToObject);
     form.reset();
     insertDataComments();
 });
@@ -86,7 +94,7 @@ console.log()
 function insertDataComments() {
   const commentsBio = document.querySelector(".comment-section");
       commentsBio.innerHTML = "";
-      modifiedDataComment.forEach((x) => {
+      dataComment.forEach((x) => {
         const commentDataContainer = document.createElement('div');
         commentDataContainer.classList.add("comment-section__container");
         commentsBio.appendChild(commentDataContainer);
