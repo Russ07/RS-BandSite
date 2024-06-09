@@ -19,14 +19,22 @@
 
 import  {apiCall} from "./band-site-api.js";
 const dataComment = await apiCall.getComments();
-const date = dataComment[1].timestamp;
-const options1 = { year: 'numeric', month: '2-digit', day: '2-digit' };
+
+
 function convertDate(Timestamp) {
   const date = new Date(Timestamp);
   const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
   return date.toLocaleDateString(undefined, options);
 }
 
+function moveLastToFront(array) {
+  if (array.length > 0) {
+      const lastItem = array.pop(); 
+      array.unshift(lastItem); 
+  }
+  return array;
+}
+const modifiedDataComment = moveLastToFront(dataComment);
 
 const form = document.getElementById("commentForm");
 form.addEventListener("submit", (e)=>{
@@ -40,7 +48,7 @@ form.addEventListener("submit", (e)=>{
         
     };
     apiCall.postComment(dataToObject);
-    dataComment.unshift(dataToObject);
+    modifiedDataComment.unshift(dataToObject);
     form.reset();
     insertDataComments();
 });
@@ -78,7 +86,7 @@ console.log()
 function insertDataComments() {
   const commentsBio = document.querySelector(".comment-section");
       commentsBio.innerHTML = "";
-      dataComment.forEach((x) => {
+      modifiedDataComment.forEach((x) => {
         const commentDataContainer = document.createElement('div');
         commentDataContainer.classList.add("comment-section__container");
         commentsBio.appendChild(commentDataContainer);
