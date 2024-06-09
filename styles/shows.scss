@@ -192,6 +192,14 @@ background: rgba(50, 50, 50, 0.5);
       padding-bottom: 2.4rem;
       padding-top: 2.4rem;
       border-bottom: 0.2rem solid $secondary-color-mercury;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+    &__table-elem:hover{
+      background-color: $secondary-color-alabaster;
+    }
+    &__table-elem-selected{
+      background-color: $secondary-color-mercury;
     }
     &__table-elem-td{
       width: 100%;

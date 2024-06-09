@@ -191,6 +191,14 @@
     padding-bottom: 2.4rem;
     padding-top: 2.4rem;
     border-bottom: 0.2rem solid #E1E1E1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .shows__table-elem:hover {
+    background-color: #FAFAFA;
+  }
+  .shows__table-elem-selected {
+    background-color: #E1E1E1;
   }
   .shows__table-elem-td {
     width: 100%;

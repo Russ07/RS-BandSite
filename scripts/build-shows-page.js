@@ -98,25 +98,43 @@
 //   showsMobile.innerHTML += div;
 // }
 // insertDataMobile();
-import  {apiCall} from "./band-site-api.js";
+import { apiCall } from "./band-site-api.js";
 const showList = await apiCall.getShows();
 console.log(showList);
 
 function convertDate(Timestamp) {
   const date = new Date(Timestamp);
-  const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+  const options = {
+    weekday: "short",
+    month: "short",
+    day: "2-digit",
+    year: "numeric",
+  };
   return date.toLocaleDateString(undefined, options);
 }
+
+const showsWrapperSelect = document.querySelector(".shows__table-body-wrapper");
+let selectedTable = null;
+showsWrapperSelect.addEventListener('click', function tableClick(event) {
+  const clickedTable = event.target;
+  if (clickedTable.classList.contains("shows__table-elem"||"shows__table-elem-td")) {
+    if (selectedTable) {
+      selectedTable.classList.remove("shows__table-elem-selected");
+    }
+    clickedTable.classList.add("shows__table-elem-selected");
+    selectedTable = clickedTable;
+  }
+});
+
 
 function insertData() {
   const table = document.querySelector(".shows__table-body-wrapper");
   showList.forEach((x) => {
-
-    const bioElementContainer = document.createElement('tr');
+    const bioElementContainer = document.createElement("tr");
     bioElementContainer.classList.add("shows__table-elem");
     table.appendChild(bioElementContainer);
 
-    const elementDate = document.createElement('td');
+    const elementDate = document.createElement("td");
     elementDate.classList.add("shows__table-elem-td");
     elementDate.classList.add("shows__table-elem-td-bold");
     elementDate.innerText = convertDate(x.date);
@@ -135,7 +153,7 @@ function insertData() {
     const elementButtonWrapper = document.createElement("td");
     elementButtonWrapper.classList.add("shows__table-elem-td");
     bioElementContainer.appendChild(elementButtonWrapper);
-    
+
     const elementButton = document.createElement("button");
     elementButton.classList.add("shows__element-button");
     elementButton.innerText = "Buy Tickets";
@@ -148,47 +166,46 @@ insertData();
 function insertDataMobile() {
   const showsMobile = document.querySelector(".shows__wrapper");
   showList.forEach((x) => {
-    const showsElementContainer = document.createElement('div');
+    const showsElementContainer = document.createElement("div");
     showsElementContainer.classList.add("shows__element");
     showsMobile.appendChild(showsElementContainer);
 
-    const showsDateTitle = document.createElement('p');
+    const showsDateTitle = document.createElement("p");
     showsDateTitle.classList.add("shows__element-title");
-    showsDateTitle.innerText ="DATE";
+    showsDateTitle.innerText = "DATE";
     showsElementContainer.appendChild(showsDateTitle);
 
-    const showsDate = document.createElement('p');
+    const showsDate = document.createElement("p");
     showsDate.classList.add("shows__element-bold-text");
     showsDate.classList.add("shows__element-padding");
     showsDate.innerHTML = x.date;
     showsElementContainer.appendChild(showsDate);
 
-    const showsVenueTitle = document.createElement('p');
+    const showsVenueTitle = document.createElement("p");
     showsVenueTitle.classList.add("shows__element-title");
-    showsVenueTitle.innerHTML ="Venue";
+    showsVenueTitle.innerHTML = "Venue";
     showsElementContainer.appendChild(showsVenueTitle);
 
-    const showsVenue = document.createElement('p');
+    const showsVenue = document.createElement("p");
     showsVenue.classList.add("shows__element-padding");
     showsVenue.innerHTML = x.venue;
     showsElementContainer.appendChild(showsVenue);
 
-    const showsLocationTitle = document.createElement('p');
+    const showsLocationTitle = document.createElement("p");
     showsLocationTitle.classList.add("shows__element-title");
     showsLocationTitle.innerHTML = "Location";
     showsElementContainer.appendChild(showsLocationTitle);
 
-    const showsLocation = document.createElement('p');
+    const showsLocation = document.createElement("p");
     showsLocation.classList.add("shows__element-padding");
     showsLocation.innerHTML = x.location;
     showsElementContainer.appendChild(showsLocation);
 
-    const showsButton = document.createElement('button');
+    const showsButton = document.createElement("button");
     showsButton.classList.add("shows__element-button");
     showsButton.innerHTML = "BUY TICKETS";
     showsElementContainer.appendChild(showsButton);
   });
-
 }
 
 insertDataMobile();

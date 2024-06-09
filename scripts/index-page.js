@@ -28,16 +28,6 @@ function convertDate(Timestamp) {
   return date.toLocaleDateString(undefined, options);
 }
 
-// function moveLastToFront(array) {
-//   if (array.length > 0) {
-//       const lastItem = array.pop(); 
-//       array.unshift(lastItem); 
-//   }
-//   return array;
-
-
-// }
-// const modifiedDataComment = moveLastToFront(dataComment);
 
 const form = document.getElementById("commentForm");
 form.addEventListener("submit", async (e)=>{
