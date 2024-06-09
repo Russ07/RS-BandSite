@@ -102,6 +102,12 @@ import  {apiCall} from "./band-site-api.js";
 const showList = await apiCall.getShows();
 console.log(showList);
 
+function convertDate(Timestamp) {
+  const date = new Date(Timestamp);
+  const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric' };
+  return date.toLocaleDateString(undefined, options);
+}
+
 function insertData() {
   const table = document.querySelector(".shows__table-body-wrapper");
   showList.forEach((x) => {
@@ -113,7 +119,7 @@ function insertData() {
     const elementDate = document.createElement('td');
     elementDate.classList.add("shows__table-elem-td");
     elementDate.classList.add("shows__table-elem-td-bold");
-    elementDate.innerText = x.date;
+    elementDate.innerText = convertDate(x.date);
     bioElementContainer.appendChild(elementDate);
 
     const elementVenue = document.createElement("td");
