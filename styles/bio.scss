@@ -255,6 +255,9 @@ background: rgba(50, 50, 50, 0.5);
     padding-left: 1.6rem;
     padding-right: 1.6rem;
   }
+  &__button:hover{
+    background-color: $secondary-color-darkblack;
+  }
   &__button-wrapper{
     display: flex;
     justify-content: right;

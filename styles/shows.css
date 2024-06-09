@@ -208,6 +208,9 @@
   .shows__element-button {
     margin: 0;
   }
+  .shows__element-button:hover {
+    background-color: #000000;
+  }
   .shows__table-elem-td-bold {
     font-weight: 900;
   }

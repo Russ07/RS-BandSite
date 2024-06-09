@@ -210,6 +210,9 @@ background: rgba(50, 50, 50, 0.5);
     &__element-button{
       margin: 0;
     }
+    &__element-button:hover{
+      background-color: $secondary-color-darkblack;
+    }
     &__table-elem-td-bold{
       font-weight: 900;
     }
