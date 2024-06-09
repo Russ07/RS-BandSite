@@ -20,10 +20,10 @@
 import  {apiCall} from "./band-site-api.js";
 const dataComment = await apiCall.getComments();
 const date = dataComment[1].timestamp;
-
+const options1 = { year: 'numeric', month: '2-digit', day: '2-digit' };
 function convertDate(Timestamp) {
   const date = new Date(Timestamp);
-  const options = { weekday: 'short', month: '2-digit', day: '2-digit' };
+  const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
   return date.toLocaleDateString(undefined, options);
 }
 
@@ -36,13 +36,15 @@ form.addEventListener("submit", (e)=>{
     const dataToObject = {
         name: nameValue,
         comment: commentValue,
-        // date: new Date().toLocaleDateString(),
+        timestamp: new Date().toLocaleDateString(),
+        
     };
     apiCall.postComment(dataToObject);
     dataComment.unshift(dataToObject);
     form.reset();
     insertDataComments();
 });
+console.log()
 
 // function insertDataComments() {
 //     let commentsBio = document.getElementById("data");
@@ -80,24 +82,30 @@ function insertDataComments() {
         const commentDataContainer = document.createElement('div');
         commentDataContainer.classList.add("comment-section__container");
         commentsBio.appendChild(commentDataContainer);
+
         const userImg = document.createElement('img');
         userImg.classList.add("comment-section__img");
         // userImg.src = x.avatar;
         commentDataContainer.appendChild(userImg);
+
         const commentDataWrapper = document.createElement('div');
         commentDataWrapper.classList.add("comment-section__wrapper");
         commentDataContainer.appendChild(commentDataWrapper);
+
         const commentDataNameDate = document.createElement('div');
         commentDataNameDate.classList.add("comment-section__name-date-wrapper");
         commentDataWrapper.appendChild(commentDataNameDate);
+
         const commentDataName = document.createElement('p');
         commentDataName.classList.add("comment-section__name");
         commentDataName.innerText =  x.name;
         commentDataNameDate.appendChild(commentDataName);
+
         const commentDataDate = document.createElement('p');
         commentDataDate.classList.add("comment-section__date");
-        commentDataDate.innerText =  x.date;
+        commentDataDate.innerText =  convertDate(x.timestamp);
         commentDataNameDate.appendChild(commentDataDate);
+
         const commentDataComment = document.createElement('p');
         commentDataComment.classList.add("comment-section__comment");
         commentDataComment.innerText =  x.comment;
